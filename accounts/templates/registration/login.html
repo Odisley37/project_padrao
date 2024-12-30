@@ -1,0 +1,15 @@
+<h1>LOGIN USER</h1>
+
+<h5>{{ error_msg }}<h5>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+    <input type="hidden" name="next" value="{{ next }}" />
+    <button type="submit"> Login</button>
+    </form>   
+    
+<p>
+    <a href="{% url 'registration/password_reset' %}">
+    Forgot my password
+    </a>
+</p>
