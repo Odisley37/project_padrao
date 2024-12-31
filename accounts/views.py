@@ -3,6 +3,8 @@ from django.contrib import messages
 from django.core.mail import send_mail
 from .forms import UserRegistrationForm
 from django.contrib.auth.models import User
+from django.contrib.auth import authenticate
+
 
 def register(request):
     if request.method == 'POST':
